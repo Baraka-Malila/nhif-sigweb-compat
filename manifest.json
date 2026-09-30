@@ -1,0 +1,28 @@
+﻿{
+    "manifest_version":  3,
+    "name":  "NHIF SigWeb Loader",
+    "version":  "1.1",
+    "description":  "Injects Topaz SigWeb API into NHIF portal for signature pad support",
+    "content_scripts":  [
+                            {
+                                "matches":  [
+                                                "*://verification.nhif.or.tz/*"
+                                            ],
+                                "js":  [
+                                           "injector.js"
+                                       ],
+                                "run_at":  "document_start"
+                            }
+                        ],
+    "web_accessible_resources":  [
+                                     {
+                                         "resources":  [
+                                                           "sigweb.js"
+                                                       ],
+                                         "matches":  [
+                                                         "*://verification.nhif.or.tz/*"
+                                                     ]
+                                     }
+                                 ],
+    "key":  "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5PacXlPKtiiwHfzaSxc3b/slXsCzocK3RJFUM72SVOSLRqvQ2YSd1MuctIjEajWjF7FUX/lA8hImn3EYG2p76VM6yhLir2BJghzRRaJAj+v2zKMeF52pWDnS/zdcvel+oL5kY9TfCpQDvzIMKOGzFsr6muYB9IQ0NUO/ThudkWTx8SdFmIy+YHAtnqxKq+vmettY0tjsjvw0cElwT7oCojXQWENX2DA0Bs53VcRnEKm9poiYrNVBYJD+e1VCa8sHbYZgmaZwPxiL21cCzOpE69FZduZbIgXswLP0qia/z5VPLMyzNG386GMTMJ6FX3PViKI6pCM4se/3qKJZ4bXplQIDAQAB"
+}
